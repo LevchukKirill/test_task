@@ -3,6 +3,7 @@ import { nextTick, ref, watch } from "vue";
 import { useStore } from "@/store/store.js";
 import { DynamicScroller, DynamicScrollerItem } from "vue-virtual-scroller";
 import "vue-virtual-scroller/dist/vue-virtual-scroller.css";
+import "../assets/base.css";
 
 const store = useStore();
 const msg = ref("");
@@ -66,6 +67,7 @@ function clickHandler() {
       </div>
       <div class="input">
         <textarea
+          id="input"
           placeholder="Введите свое сообщение"
           v-model="msg"
           class="input-msg"
@@ -126,11 +128,11 @@ function clickHandler() {
 }
 .message {
   border-radius: 10px;
-  background: rgb(0, 189, 126);
+  background: rgba(0, 189, 126, 0.1);
   font-weight: 500;
-  color: rgb(2, 42, 33);
+  color: rgb(0, 189, 126);
   padding: 5px 15px;
-  border: 1px solid black;
+  border: 3px solid var(--color-background);
   word-break: break-word;
 }
 .msgList {
@@ -142,7 +144,8 @@ function clickHandler() {
   border-bottom: 1px solid rgba(0, 189, 126, 0.1);
 }
 .scroller {
-  padding: 20px;
+  /*margin-bottom: 5px;*/
+  padding: 10px;
   scrollbar-color: rgb(0, 189, 126) rgba(0, 189, 126, 0.1);
   scrollbar-width: thin;
 }

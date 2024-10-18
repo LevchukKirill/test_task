@@ -39,11 +39,4 @@ export class Gateway {
       ...args,
     });
   }
-
-  // newChatUser() {
-  //   this.socket.on("newUserInChat", (newUser) => {
-  //     user.value = { ...user.value, ...newUser };
-  //     console.log(`Новый пользователь, ${user.name} , ${newUser.id}`);
-  //   });
-  // }
 }

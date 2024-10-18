@@ -22,7 +22,7 @@ async function clickHandler() {
       max-width="300"
       min-width="200"
     >
-      <v-card title="Профиль" color="rgb(24,24,24)" style="border-radius: 10px">
+      <v-card id="input" title="Профиль" style="border-radius: 10px">
         <v-card-text>
           <v-text-field
             v-model="user"
@@ -30,16 +30,14 @@ async function clickHandler() {
             required
           ></v-text-field>
 
-          <small class="text-caption" style="color: #aaaaaa"
-            >*обязательное поле</small
-          >
+          <small class="text-caption">*обязательное поле</small>
         </v-card-text>
 
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
-            class="text-none"
-            color="primary"
+            class="text-none text-btn"
+            color="rgba(0, 189, 126, 0.1)"
             text="Войти"
             variant="flat"
             @click="clickHandler"
@@ -50,4 +48,8 @@ async function clickHandler() {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.text-btn {
+  color: rgb(0, 189, 126);
+}
+</style>
